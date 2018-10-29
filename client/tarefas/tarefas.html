@@ -1,0 +1,25 @@
+<template name="tarefas">
+    <table class="table table-striped table-hover" id="tarefas">
+        <thead>
+            <tr>
+                <th colspan="2">{{> adicionar}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each tarefas}}
+                <tr>
+                    <td class="tarefa-nome">
+                        <input type="text" name="nome" class="{{_id}} form-control" value="{{nome}}">
+                        <span style="{{#unless ativo}}text-decoration: line-through; opacity: 0.7{{/unless}}" class="{{_id}}">{{nome}}</span>
+                    </td>
+                    <td>
+                        <button style="float: right; margin-left: 10px" type="button" class="feito-tarefa btn btn-info">Feito</button>
+                        <button style="float: right;" type="button" id="excluir_{{_id}}" class="excluir-tarefa btn btn-danger">Excluir</button>
+                        <button style="float: right; margin-right: 10px" type="button" class="{{_id}} aplicar-alteracao-tarefa btn btn-warning">Aplicar</button>
+                        <button style="float: right; margin-right: 10px" type="button" class="cancelar_{{_id}} btnCancelar btn btn-default">Cancelar</button>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</template>

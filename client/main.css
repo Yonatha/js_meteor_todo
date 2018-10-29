@@ -1,0 +1,10 @@
+/* CSS declarations go here */
+
+.alert, #tarefas tbody tr td:first-child input, .aplicar-alteracao-tarefa, #tarefas .btnCancelar ,
+#tarefas .excluir-tarefa {
+    display: none;
+}
+
+#tarefas tbody tr td:first-child{
+    cursor: pointer;
+}
